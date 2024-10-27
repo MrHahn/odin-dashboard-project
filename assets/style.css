@@ -39,8 +39,90 @@
     isolation: isolate;
   }
   /* ========================= */
-  body {
+body {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(12, 1fr);
+}
+
+svg {
+    max-width: 30px;
+    height: 30px;
+}
+
+button {
+    background: #1992d4;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 5px 22px;
+    font-size: 20px;
+    min-width: 110px;
+    font-weight: bold;
+}
+
+header {
+    grid-area: 1 / 3 / 4 / 13;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.search-bar {
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    width: 100%;
+    display: block;
+    border-radius: 20px;
+}
+
+.account-info {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    justify-items: center;
+}
+
+.account-info img {
+    max-width: 70px;
+    border-radius: 40px;
+    display: inline-block;
+}
+
+.account-id {
+    display: flex;
+    align-items: center;
+}
+
+.account-id span {
+    padding: 0 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.header-buttons {
+    align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.notifications {
+    justify-self: flex-end;
+}
+
+section.sidenav {
+    grid-area: 1 / 1 / 13 / 3;
+}
+
+section.project-list {
+    grid-area: 4 / 3 / 13 / 10;
+}
+
+aside.sidebar {
+    grid-area: 4 / 10 / 13 / 13;
 }
