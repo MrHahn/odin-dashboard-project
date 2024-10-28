@@ -129,13 +129,29 @@ header .introduction img {
 section.sidenav {
     grid-area: 1 / 1 / 13 / 3;
     display: grid;
-    grid-template-rows: 100px 1fr 1fr;
+    grid-template-rows: 100px 1.5fr 1fr;
     align-items: baseline;
     padding: 15px;
 }
 
 section.sidenav .sidenav-title span {
     font-size: 33px;
+    padding-left: 20px;
+}
+
+nav.main-nav .nav-item,
+nav.account-nav .nav-item,
+.sidenav-title {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.nav-item a {
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
 }
 
 section.project-list {
