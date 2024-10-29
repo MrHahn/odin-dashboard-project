@@ -43,6 +43,7 @@ body {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(12, 1fr);
+    background: #E2E8F0;
 }
 
 svg {
@@ -156,6 +157,36 @@ nav.account-nav .nav-item,
 
 section.project-list {
     grid-area: 4 / 3 / 13 / 10;
+    padding: 0 25px;
+}
+
+.project-card-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    gap: 25px;
+}
+
+.project-card-wrapper .project-card {
+    min-height: 200px;
+    padding: 30px 15px 0;
+    border-left: 11px solid orange;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 3px 6px 7px #929292;
+    position:relative;
+}
+
+.card-icons {
+    display: flex;
+    position: absolute;
+    bottom: 15px;
+    right: 30px;
+}
+
+.card-icons svg {
+    margin: 0 5px;
 }
 
 aside.sidebar {
