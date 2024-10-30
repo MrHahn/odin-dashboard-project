@@ -46,6 +46,10 @@ body {
     background: #E2E8F0;
 }
 
+body *{
+    font-family: "Roboto", sans-serif;
+}
+
 svg {
     max-width: 30px;
     height: 30px;
@@ -62,11 +66,17 @@ button {
     font-weight: bold;
 }
 
+h2.list-title {
+    padding-bottom: 10px;
+}
+
 header {
-    grid-area: 1 / 3 / 4 / 13;
+    grid-area: 1 / 3 / 3 / 13;
     display: grid;
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    background: white;
+    padding: 20px;
+    box-shadow: 3px 6px 7px #929292;
 }
 
 .search-bar {
@@ -79,6 +89,8 @@ header {
     width: 100%;
     display: block;
     border-radius: 20px;
+    border: none;
+    background: #E2E8F0;
 }
 
 .account-info {
@@ -130,14 +142,17 @@ header .introduction img {
 section.sidenav {
     grid-area: 1 / 1 / 13 / 3;
     display: grid;
-    grid-template-rows: 100px 1.5fr 1fr;
+    grid-template-rows: 100px .6fr 1fr;
     align-items: baseline;
     padding: 15px;
+    background: #1992d4;
+    color: white;
 }
 
 section.sidenav .sidenav-title span {
     font-size: 33px;
     padding-left: 20px;
+    font-weight: bold;
 }
 
 nav.main-nav .nav-item,
@@ -153,6 +168,11 @@ nav.account-nav .nav-item,
     text-decoration: none;
     font-size: 25px;
     font-weight: bold;
+    color:white;
+}
+
+.sidenav svg {
+    filter: invert(1);
 }
 
 section.project-list {
@@ -162,14 +182,14 @@ section.project-list {
 
 .project-card-wrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     align-items: center;
     justify-items: center;
     gap: 25px;
 }
 
 .project-card-wrapper .project-card {
-    min-height: 200px;
+    min-height: 275px;
     padding: 30px 15px 0;
     border-left: 11px solid orange;
     background: white;
@@ -191,4 +211,47 @@ section.project-list {
 
 aside.sidebar {
     grid-area: 4 / 10 / 13 / 13;
+    padding-right: 25px;
+}
+
+section.announcments,
+section.trending {
+    background: white;
+    padding: 20px 30px;
+    box-shadow: 3px 6px 7px #929292;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.announcment {
+    border-bottom: 1px solid lightgray;
+    padding: 13px 0;
+}
+
+.announcment .sub-title {
+    font-weight: bold;
+}
+
+.announcment:last-of-type {
+    border-bottom: none;
+}
+
+.user-pfp img {
+    max-width: 80px;
+    border: 1px solid;
+    border-radius: 50px;
+}
+
+.trending-user {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    align-items: center;
+    justify-items: baseline;
+    column-gap: 10px;
+    margin-bottom: 10px;
+}
+
+.user-info .user-tag {
+    display: block;
+    font-weight: bold;
 }
